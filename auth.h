@@ -1,0 +1,1 @@
+int VerifyUser(char* username, char* password);

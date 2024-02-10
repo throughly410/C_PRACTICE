@@ -1,4 +1,4 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 #include "auth.h"
 #include <string.h>
 
@@ -21,7 +21,16 @@ int main(void){
 int VerifyUser(char* username, char* password){
     char* u = "admin";
     char* p = "moxa";
+
+if( username[strlen(username) - 1] == '\n'){
+    username[strlen(username) - 1] = '\0';
+}
+
     if(strcmp(username, u) == 0) {
         puts("密碼正確");
     }
+    else{
+        puts("密碼錯誤");
+    }
+    return 0;
 }
